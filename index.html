@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-<link rel="shortcut icon" type="image/x-icon" href="https://ivanasensioqlik.github.io/JMartins/favicon.ico">  
+<link rel="shortcut icon" type="image/x-icon" href="https://ivanasensioqlik.github.io/JMartins/favicon.ico">
 <title>Qlik Mashup</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap">
 <script
@@ -28,7 +28,7 @@
   #global-header .gh-zone.right { flex:1; justify-content:flex-end; }
   #global-header .gh-zone.center { flex-shrink:0; }
   #global-header .gh-group { display:flex; align-items:center; gap:6px; min-width:0; }
-  #global-header .gh-text { font-size:max(16px,12px); font-weight:600; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; color:#1E1E1E; }
+  #global-header .gh-text { font-size:max(16px,12px); font-weight:600; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; color:#ffffff; }
   #global-header .logo-img { height:20px; max-width:80px; object-fit:contain; }
   #global-header .extra-img { height:20px; width:20px; object-fit:cover; border-radius:4px; }
   #global-header .icon-btn { background:transparent; }
@@ -89,21 +89,21 @@
   .footer-item .ficon { display:flex; }
   .footer-item.active { color:var(--icon-color, #00693A); font-weight:700; }
   .footer-item.active .ficon { color:var(--icon-color, #009845); }
-  .hidden-menu-panel { position:fixed; inset:0; background:rgba(0,0,0,.45); z-index:60; display:none; align-items:flex-start; justify-content:center; padding-top:56px; }
+  .hidden-menu-panel { position:fixed; inset:0; background:rgba(0,0,0,.45); z-index:60; display:none; align-items:flex-start; justify-content:center; padding-top:64px; padding-left:16px; padding-right:16px; }
   .hidden-menu-panel.open { display:flex; }
-  .hidden-menu-inner { background:#fff; border-radius:8px; overflow:hidden; width:80%; max-width:320px; }
-  .hidden-menu-item { display:flex; align-items:center; gap:8px; padding:12px 14px; font-size:max(16px,13px); border-bottom:1px solid #eee; color:#1e293b; cursor:pointer; }
-  .hidden-menu-item:last-child { border-bottom:none; }
+  .hidden-menu-inner { background:#fff; border-radius:16px; overflow:hidden; width:100%; max-width:280px; padding:6px 0; box-shadow:0 20px 40px rgba(0,0,0,.3); }
+  .hidden-menu-item { display:flex; align-items:center; gap:10px; padding:10px 14px; font-size:max(16px,13px); color:#1e293b; cursor:pointer; }
+  .hidden-menu-item .micon { width:32px; height:32px; border-radius:50%; display:flex; align-items:center; justify-content:center; flex-shrink:0; color:#94a3b8; }
   .hidden-menu-item.active { font-weight:700; color:var(--icon-color, #00693A); }
-  .hidden-menu-item.active svg { color:var(--icon-color, #009845); }
-  .css-1l46d7w{border-color:transparent;}
-  .css-gjspfk{border-color:transparent;}
+  .hidden-menu-item.active .micon { background:rgba(0,0,0,.06); color:var(--icon-color, #009845); }
+  .css-1l46d7w{border-color:transparent!important;}
+  .css-gjspfk{border-color:transparent!important;}
   @media (orientation: landscape) { #app-shell { height:100vh; height:100dvh; } }
 </style>
 </head>
 <body>
 <div id="app-shell">
-  <div id="global-header">
+  <div id="global-header" style="background:#0F396C;color:#ffffff;">
     <div class="gh-zone left"><button class="icon-btn" id="global-menu-btn" onclick="toggleHiddenMenu()" style="display:none;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button></div>
     <div class="gh-zone center"><span class="gh-group"><img class="logo-img" src="https://ivanasensioqlik.github.io/JMartins/img/Logo_JM.svg" alt="logo"></span></div>
     <div class="gh-zone right"><span id="global-filter-buttons" style="display:none;"><div class="header-filter-btn-slot" data-lazy-embed data-ui="analytics/chart" data-object-id="bbb148a6-1e01-4edd-bbcd-3889aa20535e" data-app-id="f61ba1e5-0e8b-447d-a1dd-dba4f5e91238"></div></span><button class="icon-btn" id="global-filter-btn" style="display:none;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"/></svg></button><button class="icon-btn" id="global-info-btn" style="display:none;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg></button></div>
@@ -115,7 +115,7 @@
       <div style="position:absolute;inset:0;background-image:url('https://ivanasensioqlik.github.io/JMartins/img/Home.webp');background-size:cover;background-position:center;"></div>
       <div class="hero-text" style="position:relative;z-index:2;display:flex;flex-direction:column;height:100%;padding:20px;justify-content:flex-start;align-items:flex-start;text-align:left;">
         <h1 style="font-size:26px;font-weight:800;margin:0;">Welcome</h1>
-        <p style="font-size:max(16px, 13px);opacity:.85;margin-top:6px;max-width:85%;">Explore your data anytime, anywhere.</p>
+        <p style="font-size:max(16px, 13px);opacity:.85;margin-top:6px;max-width:85%;">Explora tus datos desde el móvil</p>
         
       </div>
       <button class="overlay-btn next-btn" onclick="nextTab(0)" aria-label="Siguiente"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg></button>
@@ -123,48 +123,49 @@
     <p style="padding:12px 16px;font-size:max(16px, 13px);color:#F1F5F9;">Consistent execution in a context of significant deflation at Biedronka enabled us to achieve solid margins, supported by volume growth.
 </p>
     <div class="shortcut-cards"><div class="shortcut-card" style="border-color:#28425E" onclick="showTab(1)"><div><span class="num" style="color:#CBD5E1">01</span><div class="name" style="font-size:max(16px, 15px);">Sales Analysis</div></div><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#CBD5E1" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg></div><div class="shortcut-card" style="border-color:#28425E" onclick="showTab(2)"><div><span class="num" style="color:#CBD5E1">02</span><div class="name" style="font-size:max(16px, 15px);">Top Products</div></div><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#CBD5E1" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg></div></div>
+    <div style="margin-top:auto;padding:10px 16px;text-align:center;font-size:max(16px, 11px);background:#0F396C;color:#ffffff;">Dummy Data from Qlik eCommerce app</div>
   </div>
 </section>
-<section class="tab-section" id="tab-1" style="background:#F7F7F5;color:#111111;display:none;">
-  <div class="analytics-header" style="background:#0F396C;color:#ffffff;border-bottom:1px solid #E4E4E1;">
+<section class="tab-section" id="tab-1" style="background:#F5EFE0;color:#1B2A3A;display:none;">
+  <div class="analytics-header" style="background:#F5EFE0;color:#1B2A3A;border-bottom:1px solid #D98E31;">
     <div class="header-left"><button class="icon-btn" onclick="prevTab(1)" aria-label="Anterior"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M15 18l-6-6 6-6"/></svg></button></div>
     <div class="header-title-wrap">
-      <span class="header-title" style="font-size:max(16px, 14px);color:#ffffff;">Sales Analysis</span>
+      <span class="header-title" style="font-size:max(16px, 14px);">Sales Analysis</span>
       
     </div>
     <div class="header-right"><button class="icon-btn" onclick="nextTab(1)" aria-label="Siguiente"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M9 18l6-6-6-6"/></svg></button></div>
   </div>
   <div class="tab-content">
-    <div class="objects-grid" style="gap:15px;"><div class="objects-row" style="flex:0 0 auto;min-height:130px;"><div class="obj-embed-wrap" id="obj-5i95qve" style="flex:1 1 0%;min-width:0;background:#F7F7F5;border:none;position:relative;border-radius:6px;overflow:hidden;"><qlik-embed ui="analytics/chart" app-id="f61ba1e5-0e8b-447d-a1dd-dba4f5e91238" object-id="e4c47ffe-825d-4c2b-9484-97a41ec076a9"></qlik-embed></div>
-<div class="obj-embed-wrap" id="obj-dp52gnv" style="flex:1 1 0%;min-width:0;background:#F7F7F5;border:none;position:relative;border-radius:6px;overflow:hidden;"><qlik-embed ui="analytics/chart" app-id="f61ba1e5-0e8b-447d-a1dd-dba4f5e91238" object-id="69c86b6c-3e1b-4022-ba88-ad152779bdbd"></qlik-embed></div></div>
-<div class="objects-row" style="flex:0 0 auto;min-height:130px;"><div class="obj-embed-wrap" id="obj-h0elkw5" style="flex:1 1 0%;min-width:0;background:#F7F7F5;border:none;position:relative;border-radius:6px;overflow:hidden;"><qlik-embed ui="analytics/chart" app-id="f61ba1e5-0e8b-447d-a1dd-dba4f5e91238" object-id="4bea2192-109f-4346-83b6-6598edad3c7c"></qlik-embed></div>
-<div class="obj-embed-wrap" id="obj-gole60h" style="flex:1 1 0%;min-width:0;background:#F7F7F5;border:none;position:relative;border-radius:6px;overflow:hidden;"><qlik-embed ui="analytics/chart" app-id="f61ba1e5-0e8b-447d-a1dd-dba4f5e91238" object-id="02a257df-6a39-46d2-a777-94fb23aad859"></qlik-embed></div></div>
-<div class="objects-row" style="flex:0 0 auto;min-height:250px;"><div class="obj-embed-wrap" id="obj-aar6tev" style="flex:1 1 0%;min-width:0;background:#F7F7F5;border:1px solid #0F396C;position:relative;border-radius:6px;overflow:hidden;"><button class="obj-expand-btn" onclick="toggleExpand('aar6tev')" aria-label="Ampliar"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M8 3H5a2 2 0 0 0-2 2v3M16 3h3a2 2 0 0 1 2 2v3M8 21H5a2 2 0 0 1-2-2v-3M16 21h3a2 2 0 0 0 2-2v-3"/></svg></button><qlik-embed ui="analytics/chart" app-id="f61ba1e5-0e8b-447d-a1dd-dba4f5e91238" object-id="44aa1811-679c-42bc-be38-23b046aee9b4"></qlik-embed></div></div>
-<div class="objects-row" style="flex:0 0 auto;min-height:100px;"><div class="obj-minimized" id="obj-8uvhz3y" style="flex:0 0 100%;max-width:100%;width:100%;align-self:flex-start;background:#F7F7F5;color:#171717;border-left:3px solid #0F396C;">
-  <button class="obj-minimized-toggle" onclick="toggleExpand('8uvhz3y')">
-    <span class="obj-min-text"><span class="obj-min-title">Performance report</span><span class="obj-min-desc">Hourly details</span></span>
+    <div class="objects-grid" style="gap:15px;"><div class="objects-row" style="flex:0 0 auto;min-height:130px;"><div class="obj-embed-wrap" id="obj-2m7ou9q" style="flex:1 1 0%;min-width:0;background:#F5EFE0;border:none;position:relative;border-radius:6px;overflow:hidden;"><qlik-embed ui="analytics/chart" app-id="f61ba1e5-0e8b-447d-a1dd-dba4f5e91238" object-id="e4c47ffe-825d-4c2b-9484-97a41ec076a9"></qlik-embed></div>
+<div class="obj-embed-wrap" id="obj-mh5z54n" style="flex:1 1 0%;min-width:0;background:#F5EFE0;border:none;position:relative;border-radius:6px;overflow:hidden;"><qlik-embed ui="analytics/chart" app-id="f61ba1e5-0e8b-447d-a1dd-dba4f5e91238" object-id="69c86b6c-3e1b-4022-ba88-ad152779bdbd"></qlik-embed></div></div>
+<div class="objects-row" style="flex:0 0 auto;min-height:130px;"><div class="obj-embed-wrap" id="obj-3amof3o" style="flex:1 1 0%;min-width:0;background:#F5EFE0;border:none;position:relative;border-radius:6px;overflow:hidden;"><qlik-embed ui="analytics/chart" app-id="f61ba1e5-0e8b-447d-a1dd-dba4f5e91238" object-id="4bea2192-109f-4346-83b6-6598edad3c7c"></qlik-embed></div>
+<div class="obj-embed-wrap" id="obj-3jtk9p9" style="flex:1 1 0%;min-width:0;background:#F5EFE0;border:none;position:relative;border-radius:6px;overflow:hidden;"><qlik-embed ui="analytics/chart" app-id="f61ba1e5-0e8b-447d-a1dd-dba4f5e91238" object-id="02a257df-6a39-46d2-a777-94fb23aad859"></qlik-embed></div></div>
+<div class="objects-row" style="flex:0 0 auto;min-height:250px;"><div class="obj-embed-wrap" id="obj-x09q4nw" style="flex:1 1 0%;min-width:0;background:#F5EFE0;border:none;position:relative;border-radius:6px;overflow:hidden;"><button class="obj-expand-btn" onclick="toggleExpand('x09q4nw')" aria-label="Ampliar"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M8 3H5a2 2 0 0 0-2 2v3M16 3h3a2 2 0 0 1 2 2v3M8 21H5a2 2 0 0 1-2-2v-3M16 21h3a2 2 0 0 0 2-2v-3"/></svg></button><qlik-embed ui="analytics/chart" app-id="f61ba1e5-0e8b-447d-a1dd-dba4f5e91238" object-id="44aa1811-679c-42bc-be38-23b046aee9b4"></qlik-embed></div></div>
+<div class="objects-row" style="flex:0 0 auto;min-height:100px;"><div class="obj-minimized" id="obj-du8lr1w" style="flex:0 0 100%;max-width:100%;width:100%;align-self:flex-start;background:#F5EFE0;color:#1B2A3A;border-left:3px solid #D98E31;">
+  <button class="obj-minimized-toggle" onclick="toggleExpand('du8lr1w')">
+    <span class="obj-min-text"><span class="obj-min-title">Title 1</span><span class="obj-min-desc">Subtitle 1</span></span>
     <svg class="chev" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
   </button>
   <div class="obj-min-body">
     <div class="obj-embed-wrap" style="width:100%;height:100%;position:relative;"><qlik-embed ui="analytics/chart" app-id="f61ba1e5-0e8b-447d-a1dd-dba4f5e91238" object-id="61abab6d-f21f-41cf-9370-b3d89ce04c84"></qlik-embed></div>
   </div>
-  <button class="obj-close-btn" onclick="toggleExpand('8uvhz3y')" aria-label="Cerrar">&times;</button>
+  <button class="obj-close-btn" onclick="toggleExpand('du8lr1w')" aria-label="Cerrar">&times;</button>
 </div></div></div>
   </div>
 </section>
-<section class="tab-section" id="tab-2" style="background:#0F1B2D;color:#F1F5F9;display:none;">
-  <div class="analytics-header" style="background:#0F1B2D;color:#F1F5F9;border-bottom:1px solid #28425E;">
+<section class="tab-section" id="tab-2" style="background:#F5EFE0;color:#1B2A3A;display:none;">
+  <div class="analytics-header" style="background:#F5EFE0;color:#1B2A3A;border-bottom:1px solid #D98E31;">
     <div class="header-left"><button class="icon-btn" onclick="prevTab(2)" aria-label="Anterior"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M15 18l-6-6 6-6"/></svg></button></div>
     <div class="header-title-wrap">
-      <span class="header-title" style="font-size:max(16px, 14px);color:#F1F5F9;">Top Products</span>
+      <span class="header-title" style="font-size:max(16px, 14px);">Top Products</span>
       
     </div>
     <div class="header-right"></div>
   </div>
   <div class="tab-content">
-    <div class="objects-grid" style="gap:8px;"><div class="objects-row" style="flex:0 0 auto;min-height:100px;"><div class="obj-embed-wrap" id="obj-kxbukpm" style="flex:1 1 0%;min-width:0;background:#F7F7F5;border:1px solid #CBD5E1;position:relative;border-radius:6px;overflow:hidden;"><qlik-embed ui="classic/chart" app-id="f61ba1e5-0e8b-447d-a1dd-dba4f5e91238" object-id="JhNVS"></qlik-embed></div></div>
-<div class="objects-row" style="flex:0 0 auto;min-height:100px;"><div class="obj-embed-wrap" id="obj-9k0989o" style="flex:1 1 0%;min-width:0;background:#F7F7F5;border:1px solid #CBD5E1;position:relative;border-radius:6px;overflow:hidden;"><qlik-embed ui="classic/chart" app-id="f61ba1e5-0e8b-447d-a1dd-dba4f5e91238" object-id="xUjvLZ"></qlik-embed></div></div>
-<div class="objects-row" style="flex:0 0 auto;min-height:350px;"><div class="obj-embed-wrap" id="obj-mve3i1c" style="flex:1 1 0%;min-width:0;background:#F7F7F5;border:1px solid #CBD5E1;position:relative;border-radius:6px;overflow:hidden;"><button class="obj-expand-btn" onclick="toggleExpand('mve3i1c')" aria-label="Ampliar"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M8 3H5a2 2 0 0 0-2 2v3M16 3h3a2 2 0 0 1 2 2v3M8 21H5a2 2 0 0 1-2-2v-3M16 21h3a2 2 0 0 0 2-2v-3"/></svg></button><qlik-embed ui="analytics/chart" app-id="f61ba1e5-0e8b-447d-a1dd-dba4f5e91238" object-id="b6db817d-d99b-4b68-964b-215eab691672"></qlik-embed></div></div></div>
+    <div class="objects-grid" style="gap:8px;"><div class="objects-row" style="flex:0 0 auto;min-height:100px;"><div class="obj-embed-wrap" id="obj-ozv4rw8" style="flex:1 1 0%;min-width:0;background:#F5EFE0;border:none;position:relative;border-radius:6px;overflow:hidden;"><qlik-embed ui="classic/chart" app-id="f61ba1e5-0e8b-447d-a1dd-dba4f5e91238" object-id="JhNVS"></qlik-embed></div></div>
+<div class="objects-row" style="flex:0 0 auto;min-height:100px;"><div class="obj-embed-wrap" id="obj-610x7o7" style="flex:1 1 0%;min-width:0;background:#F5EFE0;border:none;position:relative;border-radius:6px;overflow:hidden;"><qlik-embed ui="analytics/chart" app-id="f61ba1e5-0e8b-447d-a1dd-dba4f5e91238" object-id="xUjvLZ"></qlik-embed></div></div>
+<div class="objects-row" style="flex:0 0 auto;min-height:300px;"><div class="obj-embed-wrap" id="obj-y709s7x" style="flex:1 1 0%;min-width:0;background:#F5EFE0;border:none;position:relative;border-radius:6px;overflow:hidden;"><button class="obj-expand-btn" onclick="toggleExpand('y709s7x')" aria-label="Ampliar"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M8 3H5a2 2 0 0 0-2 2v3M16 3h3a2 2 0 0 1 2 2v3M8 21H5a2 2 0 0 1-2-2v-3M16 21h3a2 2 0 0 0 2-2v-3"/></svg></button><qlik-embed ui="analytics/chart" app-id="f61ba1e5-0e8b-447d-a1dd-dba4f5e91238" object-id="b6db817d-d99b-4b68-964b-215eab691672"></qlik-embed></div></div></div>
   </div>
 </section>
   </div>
@@ -172,17 +173,17 @@
 </div>
 <div class="hidden-menu-panel" id="hidden-menu-panel">
   <div class="hidden-menu-inner" style="--icon-color:#0F396C;">
-    <div class="hidden-menu-item" data-idx="0" onclick="showTab(0);toggleHiddenMenu();"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V20a1 1 0 0 0 1 1h4v-6h4v6h4a1 1 0 0 0 1-1V9.5"/></svg><span>Home</span></div>
-    <div class="hidden-menu-item" data-idx="1" onclick="showTab(1);toggleHiddenMenu();"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg><span>Sales Analysis</span></div>
-    <div class="hidden-menu-item" data-idx="2" onclick="showTab(2);toggleHiddenMenu();"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg><span>Top Products</span></div>
+    <div class="hidden-menu-item" data-idx="0" onclick="showTab(0);toggleHiddenMenu();"><span class="micon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V20a1 1 0 0 0 1 1h4v-6h4v6h4a1 1 0 0 0 1-1V9.5"/></svg></span><span>Welcome</span></div>
+    <div class="hidden-menu-item" data-idx="1" onclick="showTab(1);toggleHiddenMenu();"><span class="micon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg></span><span>Sales Analysis</span></div>
+    <div class="hidden-menu-item" data-idx="2" onclick="showTab(2);toggleHiddenMenu();"><span class="micon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg></span><span>Top Products</span></div>
   </div>
 </div>
-<div class="info-popup" id="info-popup-b65qqxf" style="display:none;"><div class="info-popup-inner" style="background:#16273D;color:#F1F5F9;"><button class="popup-close" onclick="toggleInfoPopup('b65qqxf')">&times;</button><div class="info-popup-title" style="color:#CBD5E1;">About this app</div><p style="margin:0 0 10px;">Application generated using Qlik Sense and Qlik Embed API.</p><p style="margin:0 0 10px;">It analyzes main Sales KPIs with Dummy data in context of BI modernization initiative.</p><p style="margin:0 0 10px;">Source: Dummy, eCommerce Live app</p><p style="margin:0 0 10px;">Support: </p><p style="margin:0 0 10px;"><a href="mailto:iryna.iacob@jeronimo-martins.com" style="color:#3B82F6;text-decoration:underline;word-break:break-all;">iryna.iacob@jeronimo-martins.com</a></p><p style="margin:0 0 10px;"><a href="mailto:antonio.mendes@jeronimo-martins.com" style="color:#3B82F6;text-decoration:underline;word-break:break-all;">antonio.mendes@jeronimo-martins.com</a></p><p style="margin:0 0 10px;">Updated: October 7th, 2026</p></div></div>
+<div class="info-popup" id="info-popup-xcvwkds" style="display:none;"><div class="info-popup-inner" style="background:#16273D;color:#F1F5F9;"><button class="popup-close" onclick="toggleInfoPopup('xcvwkds')">&times;</button><div class="info-popup-title" style="color:#CBD5E1;">About this app</div><p style="margin:0 0 10px;">Application generated using Qlik Sense and Qlik Embed API.</p><p style="margin:0 0 10px;">It analyzes main Sales KPIs with Dummy data in context of BI modernization initiative.</p><p style="margin:0 0 10px;">Source: Dummy, eCommerce Live app</p><p style="margin:0 0 10px;">Support: </p><p style="margin:0 0 10px;"><a href="mailto:iryna.iacob@jeronimo-martins.com" style="color:#3B82F6;text-decoration:underline;word-break:break-all;">iryna.iacob@jeronimo-martins.com</a></p><p style="margin:0 0 10px;"><a href="mailto:antonio.mendes@jeronimo-martins.com" style="color:#3B82F6;text-decoration:underline;word-break:break-all;">antonio.mendes@jeronimo-martins.com</a></p><p style="margin:0 0 10px;">Updated: October 7th, 2026</p></div></div>
 <div class="filter-panel" id="global-filter-panel" style="width:290px;"><div class="filter-header"><span>Filters</span><button class="filter-close" onclick="toggleFilterPanel()">&times;</button></div><div class="filter-body"><div class="filter-main-object"><div class="filter-main-embed" data-lazy-embed data-ui="analytics/chart" data-object-id="a69e43f4-f08e-4faa-bb5c-ee7628876868" data-app-id="f61ba1e5-0e8b-447d-a1dd-dba4f5e91238"></div></div></div></div>
 <div class="filter-backdrop" id="filter-backdrop"></div>
 <script>
   const TAB_COUNT = 3;
-  const TAB_META = [{"id":"b65qqxf","infoEnabled":true,"isWelcome":true},{"id":"lvqlcyq","infoEnabled":false,"isWelcome":false},{"id":"1txknc6","infoEnabled":false,"isWelcome":false}];
+  const TAB_META = [{"id":"xcvwkds","infoEnabled":true,"isWelcome":true},{"id":"q6w9m9w","infoEnabled":false,"isWelcome":false},{"id":"t04nx58","infoEnabled":false,"isWelcome":false}];
   const FILTER_ENABLED = true;
   let currentIdx = 0;
 
